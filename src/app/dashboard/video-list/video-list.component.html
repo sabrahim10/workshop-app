@@ -1,6 +1,8 @@
-<ul> 
-        <li *ngFor ="let video of videos">
-            <h3>{{ video.title }}</h3>
-            <p>{{ video.author }}</p>
-        </li>
-</ul>
+<button
+ *ngFor ="let video of videos"
+    (click)="selectVideo(video)"
+    [class.selected] = "selectedVideo === video"
+    >
+        <h3>{{ video.title }}</h3>
+        <p>{{ video.author }}</p>
+</button>

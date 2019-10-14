@@ -1,2 +1,3 @@
-<app-video-list></app-video-list>
-<app-video-player></app-video-player>
+<app-video-list [videos]= "videos" (videoSelected)="selectedVideo=$event"></app-video-list>
+
+<app-video-player [video]="selectedVideo"></app-video-player>
